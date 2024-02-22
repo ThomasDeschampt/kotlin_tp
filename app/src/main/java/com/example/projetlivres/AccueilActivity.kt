@@ -2,12 +2,12 @@ package com.example.projetlivres
 
 import Livres
 import LivresDAO
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
-import com.example.projetlivres.R
+
 
 class AccueilActivity : AppCompatActivity() {
 
@@ -33,6 +33,19 @@ class AccueilActivity : AppCompatActivity() {
 
     }
 
+    override fun onResume() {
+        super.onResume()
+
+        recupererlivres()
+        malist= findViewById(R.id.malist)
+
+        val layoutManager = LinearLayoutManager(this)
+        layoutManager.orientation = LinearLayoutManager.VERTICAL
+        malist.layoutManager = layoutManager
+
+        malist.adapter = listeadapter
+    }
+
     fun recupererlivres() {
         val bdd = FirebaseFirestore.getInstance()
         val livresCollection = bdd.collection("Livres")
@@ -43,5 +56,4 @@ class AccueilActivity : AppCompatActivity() {
             listeadapter.notifyDataSetChanged()
         }
     }
-
 }

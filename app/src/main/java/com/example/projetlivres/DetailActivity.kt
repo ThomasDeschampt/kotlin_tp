@@ -2,6 +2,7 @@ package com.example.projetlivres
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.TextView
@@ -43,6 +44,10 @@ class DetailActivity : AppCompatActivity() {
             }
         }
 
+        val retourButton = findViewById<Button>(R.id.button_retour)
+        retourButton.setOnClickListener {
+            finish()
+        }
 
     }
 
