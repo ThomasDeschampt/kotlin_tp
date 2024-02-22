@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "996444220757",
+    "project_id": "projet-mobile-aaf7a",
+    "storage_bucket": "projet-mobile-aaf7a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:996444220757:android:3fa575056eff75fc4293dc",
+        "android_client_info": {
+          "package_name": "com.example.projetlivres"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAj9OYpAYo8-ZW3fbUgJggy0vNPIFs2Wh0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
